@@ -45,13 +45,14 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-							<a target=”_blank” href="mailto:">
+					<div style="margin-left:27%">
+							<a target=”_blank” href="mailto:lgunewsanroque@gmail.com">
                                     <span class="fa-stack fa-xl">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fa-solid fa-envelope fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
-							<a target=”_blank” href="tel:">
+							<a target=”_blank” href="tel:+63548810017">
                                     <span class="fa-stack fa-xl">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fa-solid fa-phone fa-stack-1x fa-inverse"></i>
@@ -62,22 +63,64 @@
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fa-solid fa-location-dot fa-stack-1x fa-inverse"></i>
                                     </span>
-                            </a><br>
-                            Email: <br>
-							Landline Number: <br>
-							Contact Number/s: <br>
-							
-							<div style="margin-left:70%">
+                            </a>
+							<a target=”_blank” href="https://www.facebook.com/groups/1634798486803269">
+                                    <span class="fa-stack fa-xl">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                            </a>
 							<br>
-							<form action="/action_page.php" id="usrform">
-							Name: <input type="text" name="name"><br>
-							Email: <input type="text" name="email"><br>
-							Contact Number: <input type="text" name="number">
-							</form>
-							<br>
-							<textarea rows="4" cols="50" name="comment" form="usrform">Enter text here...</textarea>
-							<br><input type="submit">
 							</div>
+							<br>
+                            <h5>Email: lgunewsanroque@gmail.com</h5><br>
+							<h5>Landline Number: (054) 881-0017 </h5><br>
+							<h5>Contact Number: 09703170689 </h5><br>
+							
+							<hr width="239%" style="margin-left:-80%">
+                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <div class="form-floating">
+                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                    <label for="name">Name</label>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="email" type="email" placeholder="Enter your email..." data-sb-validations="required,email" />
+                                    <label for="email">Email address</label>
+                                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />
+                                    <label for="phone">Phone Number</label>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
+                                    <label for="message">Message</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                </div>
+                                <br />
+                                <!-- Submit success message-->
+                                <!---->
+                                <!-- This is what your users will see when the form-->
+                                <!-- has successfully submitted-->
+                                <div class="d-none" id="submitSuccessMessage">
+                                    <div class="text-center mb-3">
+                                        <div class="fw-bolder">Form submission successful!</div>
+                                        To activate this form, sign up at
+                                        <br />
+                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    </div>
+                                </div>
+                                <!-- Submit error message-->
+                                <!---->
+                                <!-- This is what your users will see when there is-->
+                                <!-- an error submitting the form-->
+                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                                <!-- Submit Button-->
+                                <button class="btn btn-primary text-uppercase disabled" id="submitButton" type="submit">Send</button>
+                            </form>
                         </div>
                     </div>
                 </div>
