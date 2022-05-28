@@ -2,38 +2,35 @@
 <html>
  
 <head>
-    <title>Insert Page page</title>
+    <title>Insert Comment page</title>
 </head>
  
 <body>
     <center>
         <?php
  
-        $servername = "localhost";
-		$username = "username";
-		$password = "password";
-		$dbname = "database_name";
-        $conn = mysqli_connect("localhost", "root", "", "staff");
+        $servername = "sql102.epizy.com";
+		$username = "epiz_31791775";
+		$password = "fpPqwtJ4JaHhr";
+		$dbname = "epiz_31791775_comment_box";
+        $conn = mysqli_connect("sql102.epizy.com", "epiz_31791775", "fpPqwtJ4JaHhr", "epiz_31791775_comment_box");
          
         if($conn === false){
             die("ERROR: Could not connect. "
                 . mysqli_connect_error());
         }
          
-        // Taking all 5 values from the form data(input)
         $name =  $_REQUEST['name'];
         $email = $_REQUEST['email'];
 		$phone =  $_REQUEST['phone'];
 		$message =  $_REQUEST['message'];
          
 		 
-        $sql = "INSERT INTO college  VALUES ('$name',
+        $sql = "INSERT INTO comment VALUES ('$name',
             '$email','$phone','$message')";
          
         if(mysqli_query($conn, $sql)){
-            echo "<h3>data stored in a database successfully."
-                . " Please browse your localhost php my admin"
-                . " to view the updated data</h3>";
+            echo "<h3>data stored in a database successfully.</h3>";
  
             echo nl2br("\n$name\n $email\n "
                 . "$phone\n $message");
@@ -42,6 +39,9 @@
                 . mysqli_error($conn);
         }
          
+		    $url='contact.html';
+			echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+		 
         // Close connection
         mysqli_close($conn);
         ?>
